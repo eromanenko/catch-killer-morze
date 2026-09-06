@@ -16,13 +16,11 @@
     }
   </style>
   <title>Поймай убийцу</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=PT+Mono&display=swap">
-  <link rel="stylesheet" href="./css/templates-style.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/phone.css">
 
@@ -1609,6 +1607,11 @@
     });
   </script>
   <script src="./js/phone.js"></script>
+  <div id="qr-scanner-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.95); z-index: 9999; flex-direction: column; align-items: center; justify-content: center;">
+    <div id="qr-reader" style="width: 100%; max-width: 500px;"></div>
+    <button id="close-qr-scanner" class="btn red_btn" style="margin-top: 20px;">Закрыть</button>
+  </div>
+  <script src="./js/html5-qrcode.min.js"></script>
+  <script src="./js/qr-scanner.js"></script>
 </body>
-
 </html>

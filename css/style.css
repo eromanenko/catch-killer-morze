@@ -7,68 +7,15 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  font-family: 'PT Mono', monospace;
+  color: #000;
+  background-color: #231f1f;
 }
 
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-header>.container {
-  align-items: flex-end !important;
-}
-
-.navbar {
-  padding: 0 !important;
-}
-
-header ul li a.nav-link.active {
-  font-weight: bold;
-}
-
-.burger-btn {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 10;
-  margin: 25px 1rem;
-}
-
-.burger-btn span {
-  height: 3px;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 2px;
-  transition: all 0.3s ease-in-out;
-}
-
-header ul.navbar-nav {
-  padding: 0;
-  flex-direction: row-reverse !important;
-}
-
-header ul li {
-  margin-left: -30px;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header ul li a.nav-link {
-  padding: 0 !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 #tab_wrapper {
@@ -88,7 +35,7 @@ header ul li a.nav-link {
 
 #tab_wrapper .nav .nav-item {
   width: 500px;
-  background-image: url(/assets/birka.webp);
+  background-image: url(../assets/birka.webp);
   background-position: center top;
   background-size: 100% 100%;
   z-index: 3;
@@ -114,7 +61,7 @@ header ul li a.nav-link {
 }
 
 #myTabContent_wrapper {
-  background-image: url(/assets/papka.webp);
+  background-image: url(../assets/papka.webp);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 1520px 100%;
@@ -123,7 +70,7 @@ header ul li a.nav-link {
 }
 
 #tab_wrapper .nav:after {
-  background-image: url(/assets/list.webp);
+  background-image: url(../assets/list.webp);
   background-position: center -15px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -156,16 +103,6 @@ header ul li a.nav-link {
   height: 50px;
   font-size: 28px;
   font-weight: 600;
-}
-
-header ul li.nav-item.active {
-  background-image: url(/images/menu_active.png);
-  z-index: 2;
-}
-
-h1 span.subtitle {
-  font-size: inherit;
-  display: inline;
 }
 
 #task {
@@ -469,6 +406,14 @@ h1 span.subtitle {
   padding: 5px 20px;
   width: fit-content;
   min-width: 205px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(154, 37, 44);
+  background-image: -moz-linear-gradient(90deg, rgb(103, 9, 18) 0%, rgb(146, 39, 44) 81%);
+  background-image: -webkit-linear-gradient(90deg, rgb(103, 9, 18) 0%, rgb(146, 39, 44) 81%);
+  background-image: -ms-linear-gradient(90deg, rgb(103, 9, 18) 0%, rgb(146, 39, 44) 81%);
+  border-radius: 50px;
+  color: #fff;
 }
 
 .btn.red_btn:hover {
@@ -499,75 +444,6 @@ h1 span.subtitle {
 }
 
 @media (max-width: 997px) {
-  header {
-    min-height: auto;
-  }
-
-  .burger-btn {
-    display: flex;
-  }
-
-  .nav-menu {
-    display: block;
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    z-index: 9;
-    transform: translateX(-100%);
-    transition: 0.3s ease-in-out all;
-    background-color: #231f1f;
-  }
-
-  .burger-btn.open span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .burger-btn.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .burger-btn.open span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .nav-menu.is-active {
-    opacity: 1;
-    pointer-events: all;
-    transform: translateX(0);
-  }
-
-  header ul.nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar .container {
-    justify-content: end;
-  }
-
-  header ul li {
-    display: block;
-    width: 195px;
-    height: fit-content;
-    background-image: none;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  header ul li:hover {
-    background-image: none;
-  }
-
-  header ul li a.nav-link {
-    color: #fff;
-    padding: 10px 0;
-  }
-}
 
 @media (max-width: 768px) {
   #task label {
