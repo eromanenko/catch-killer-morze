@@ -1,3 +1,14 @@
+// http://Crimegames.ru/keymorgan - index
+// http://Crimegames.ru/telephone5 - telephone
+// http://Crimegames.ru/startaudio5 - start.mp3
+// http://Crimegames.ru/grimm - grim.mp3
+// http://Crimegames.ru/klaus - casper_klaus.mp3
+// http://Crimegames.ru/morse - morgan-morze.mp3
+// http://Crimegames.ru/tompson - tompson.mp3
+// http://Crimegames.ru/frost - frost.mp3
+// http://Crimegames.ru/vv - valdemar.mp3
+// http://Crimegames.ru/finalaudio5 - final.mp3
+
 const qrActions = [
     { match: ['keymorgan', 'delo'], action: 'tab', target: '#check_versions' },
     { match: ['telephone5', 'telephone'], action: 'tab', target: '#phone' },
@@ -38,7 +49,7 @@ function startQrScanner() {
     }
 
     const config = { fps: 10, qrbox: { width: 250, height: 250 } };
-    
+
     html5QrCode.start({ facingMode: "environment" }, config, onScanSuccess, onScanFailure)
         .catch(err => {
             console.error("Camera access failed", err);
@@ -59,7 +70,7 @@ function stopQrScanner() {
 function onScanSuccess(decodedText, decodedResult) {
     let matchedAction = null;
     let text = decodedText.toLowerCase();
-    
+
     for (let item of qrActions) {
         if (item.match.some(m => text.includes(m.toLowerCase()))) {
             matchedAction = item;
@@ -69,7 +80,7 @@ function onScanSuccess(decodedText, decodedResult) {
 
     if (matchedAction) {
         stopQrScanner();
-        
+
         if (matchedAction.action === 'tab') {
             switchToTab(matchedAction.target);
         } else if (matchedAction.action === 'audio') {

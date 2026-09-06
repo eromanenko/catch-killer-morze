@@ -1,0 +1,18 @@
+{
+  "name": "Дело Моргана Морзе",
+  "short_name": "Морган Морзе",
+  "description": "Поймай убийцу. Дело Моргана Морзе",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#e00000",
+  "version": "0.8.1",
+  "icons": [
+    {
+      "src": "./assets/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

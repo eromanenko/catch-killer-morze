@@ -18,7 +18,8 @@
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
 }
 
 .phone-window {
@@ -155,9 +156,11 @@
   .keypad {
     gap: 12px;
   }
+
   #keypad {
     height: 75%;
   }
+
   .display {
     height: 25%;
   }

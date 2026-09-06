@@ -49,10 +49,14 @@ main {
 }
 
 #tab_wrapper .nav .nav-item:nth-child(2) {
-  z-index: 2;
+  z-index: 3;
 }
 
 #tab_wrapper .nav .nav-item:nth-child(3) {
+  z-index: 2;
+}
+
+#tab_wrapper .nav .nav-item:nth-child(4) {
   z-index: 1;
 }
 
@@ -443,170 +447,179 @@ main {
   margin-bottom: 25px;
 }
 
+#phone {
+  padding-top: 70px;
+}
+
+#phone_wrapper {
+  min-width: 300px;
+}
+
 @media (max-width: 997px) {
 
-@media (max-width: 768px) {
-  #task label {
-    font-size: 14px;
+  @media (max-width: 768px) {
+    #task label {
+      font-size: 14px;
+    }
+
+    #task label input:checked+span:before {
+      width: 15px;
+      height: 15px;
+      background-size: contain;
+    }
+
+    #task .btn.red_btn {
+      width: 100%;
+    }
+
+    summary {
+      padding: 16px;
+      font-size: 15px;
+    }
+
+    summary::after {
+      font-size: 16px;
+      top: 16px;
+      transform: none;
+    }
   }
 
-  #task label input:checked+span:before {
-    width: 15px;
-    height: 15px;
-    background-size: contain;
+  @media (max-width: 576px) {
+    #hints-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #task {
+      padding-bottom: 310px;
+    }
+
+    #hint-result-text {
+      font-size: 14px;
+    }
+
+    #task label {
+      padding-left: 15px;
+    }
+
+    .buttons-group {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      width: 100%;
+    }
+
+    .checkversion-btn {
+      order: 0;
+    }
+
+    .prev-question-btn {
+      order: 1;
+    }
+
+    .version h3 {
+      font-size: 18px !important;
+      font-weight: bold;
+    }
+
+    .answers_list {
+      width: 100%;
+    }
+
+    .answers_list label,
+    .answers_list+p {
+      font-size: 16px;
+    }
+
+    #answerlists_id_3 .answers_list label {
+      width: 100%;
+    }
+
+    #tab_wrapper .nav {
+      height: 130px;
+      margin-left: 0;
+      margin-bottom: -95px;
+    }
+
+    #tab_wrapper .nav .nav-item {
+      margin-left: -30px;
+    }
+
+    #tab_wrapper .nav .nav-item .nav-link {
+      height: auto;
+    }
+
+    #tab_wrapper .nav::after {
+      bottom: 50px;
+      width: 115%;
+    }
+
+    #opis-container {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
-  #task .btn.red_btn {
-    width: 100%;
+  @media (max-width: 480px) {
+
+    #opis,
+    #check_versions,
+    #task,
+    #phone {
+      padding-top: 100px;
+    }
+
+    #tab_wrapper .nav {
+      margin-bottom: -95px;
+      gap: 0;
+      padding-left: 15px;
+      width: calc(100% + 15px);
+      height: 115px;
+    }
+
+    #tab_wrapper .nav .nav-item {
+      margin-left: 0;
+      width: calc(100% / 3);
+      padding-top: 25px;
+
+      display: flex;
+      justify-content: center;
+      border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
+      margin-left: -30px;
+      width: calc(100% + 30px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #myTabContent {
+      padding-top: 0;
+    }
+
+    #tab_wrapper .nav .nav-item .nav-link {
+      padding: 2px 5px;
+      margin-top: 0;
+      height: fit-content;
+      width: fit-content;
+      font-size: 14px;
+      width: 70%;
+    }
+
+    #tab_wrapper .nav .nav-item .nav-link::before {
+      top: 0;
+      height: 100%;
+      left: 0;
+      width: 100%;
+      /*     box-shadow: 0 0 2px 1px rgb(78, 69, 69); */
+    }
+
+    #tab_wrapper .nav::after {
+      left: -20px;
+      width: calc(100% + 15px);
+      bottom: 60px;
+    }
+
+    #tab_wrapper {
+      margin-top: 0;
+    }
   }
-
-  summary {
-    padding: 16px;
-    font-size: 15px;
-  }
-
-  summary::after {
-    font-size: 16px;
-    top: 16px;
-    transform: none;
-  }
-}
-
-@media (max-width: 576px) {
-  #hints-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #task {
-    padding-bottom: 310px;
-  }
-
-  #hint-result-text {
-    font-size: 14px;
-  }
-
-  #task label {
-    padding-left: 15px;
-  }
-
-  .buttons-group {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    width: 100%;
-  }
-
-  .checkversion-btn {
-    order: 0;
-  }
-
-  .prev-question-btn {
-    order: 1;
-  }
-
-  .version h3 {
-    font-size: 18px !important;
-    font-weight: bold;
-  }
-
-  .answers_list {
-    width: 100%;
-  }
-
-  .answers_list label,
-  .answers_list+p {
-    font-size: 16px;
-  }
-
-  #answerlists_id_3 .answers_list label {
-    width: 100%;
-  }
-
-  #tab_wrapper .nav {
-    height: 130px;
-    margin-left: 0;
-    margin-bottom: -95px;
-  }
-
-  #tab_wrapper .nav .nav-item {
-    margin-left: -30px;
-  }
-
-  #tab_wrapper .nav .nav-item .nav-link {
-    height: auto;
-  }
-
-  #tab_wrapper .nav::after {
-    bottom: 50px;
-    width: 115%;
-  }
-
-  #opis-container {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-
-  #opis,
-  #check_versions,
-  #task {
-    padding-top: 100px;
-  }
-
-  #tab_wrapper .nav {
-    margin-bottom: -95px;
-    gap: 0;
-    padding-left: 15px;
-    width: calc(100% + 15px);
-    height: 115px;
-  }
-
-  #tab_wrapper .nav .nav-item {
-    margin-left: 0;
-    width: calc(100% / 3);
-    padding-top: 25px;
-
-    display: flex;
-    justify-content: center;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
-    margin-left: -30px;
-    width: calc(100% + 30px);
-    position: relative;
-    overflow: hidden;
-  }
-
-  #myTabContent {
-    padding-top: 0;
-  }
-
-  #tab_wrapper .nav .nav-item .nav-link {
-    padding: 2px 5px;
-    margin-top: 0;
-    height: fit-content;
-    width: fit-content;
-    font-size: 14px;
-    width: 70%;
-  }
-
-  #tab_wrapper .nav .nav-item .nav-link::before {
-    top: 0;
-    height: 100%;
-    left: 0;
-    width: 100%;
-    /*     box-shadow: 0 0 2px 1px rgb(78, 69, 69); */
-  }
-
-  #tab_wrapper .nav::after {
-    left: -20px;
-    width: calc(100% + 15px);
-    bottom: 60px;
-  }
-
-  #tab_wrapper {
-    margin-top: 0;
-  }
-}
