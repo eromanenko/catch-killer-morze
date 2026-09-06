@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    body {
+      transition: opacity ease-in 0.2s;
+    }
+
+    body[unresolved] {
+      opacity: 0;
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
+  <title>Поймай убийцу</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=PT+Mono&display=swap">
+  <link rel="stylesheet" href="./css/templates-style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/phone.css">
+
+  <script type="text/javascript" src="./js/jquery-4.0.0.slim.min.js"></script>
+</head>
+
+<body>
+  <main id="index">
+    <section id="tab_wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ul class="nav">
+              <li class="nav-item active">
+                <a class="nav-link active" data-name="Вопросы" data-bs-toggle="tab" data-bs-target="#check_versions"
+                  type="button" role="tab">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-name="Подсказки" data-bs-toggle="tab" data-bs-target="#task" type="button"
+                  role="tab">Подсказки</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-name="Опись" data-bs-toggle="tab" data-bs-target="#opis" type="button"
+                  role="tab">Опись</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-name="Телефон" data-bs-toggle="tab" data-bs-target="#phone" type="button"
+                  role="tab">Телефон</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="myTabContent_wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="tab-content" id="myTabContent">
+                <div id="check_versions" class="tab-pane fade show active" role="tabpanel"
+                  aria-labelledby="version-tab">
+                  <div class="container">
+
+                    <div class="version question-block" id="question-1" data-question="1" style="display:block;">
+
+                      <h3 class="title">1. Кто автор любовного послания к Марине?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option error">
+                            <input type="radio" name="answer_1" value="0">
+                            <span class="checkbox"></span>
+                            Феликс Фрост </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_1" value="1">
+                            <span class="checkbox"></span>
+                            Тамара Томпсон </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_1" value="2">
+                            <span class="checkbox"></span>
+                            Габриэль Гримм </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_1" value="3">
+                            <span class="checkbox"></span>
+                            Вальдемар </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_1" value="4">
+                            <span class="checkbox"></span>
+                            Каспер Клаус </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_1" value="5">
+                            <span class="checkbox"></span>
+                            Морган Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_1" value="6">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+
+                          <button id="check-btn-1" class="checkversion-btn btn red_btn" data-question="1">Проверить
+                            версию</button>
+
+                          <button id="next-btn-1" class="next-question-btn btn red_btn" data-question="1" data-next="2"
+                            style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message error" style="">Любовное послание действительно написано почерком
+                          Феликса. Но молодой человек не имеет к нему никакого отношения. Ваша версия неверна. Советуем
+                          ещё раз изучить материалы дела или воспользоваться подсказками.</div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-2" data-question="2" style="display:none;">
+
+                      <h3 class="title">2. Что случилось с Мариной Морзе?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_2" value="0">
+                            <span class="checkbox"></span>
+                            Марина инициировала свою смерть из-за долгов </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_2" value="1">
+                            <span class="checkbox"></span>
+                            Марина совершила ограбление, после чего пропала </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_2" value="2">
+                            <span class="checkbox"></span>
+                            Морган подстроил несчастный случай </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_2" value="3">
+                            <span class="checkbox"></span>
+                            Габриэль взяла её с собой в путешествие </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_2" value="4">
+                            <span class="checkbox"></span>
+                            С Мариной произошёл несчастный случай </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_2" value="5">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-2" class="prev-question-btn btn red_btn" data-question="2">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-2" class="checkversion-btn btn red_btn" data-question="2">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-2" class="next-question-btn btn red_btn" data-question="2" data-next="3"
+                            style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-3" data-question="3" style="display:none;">
+
+                      <h3 class="title">3. Что случилось с котом Марципаном?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_3" value="0">
+                            <span class="checkbox"></span>
+                            Морган провёл неудачный ритуал </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_3" value="1">
+                            <span class="checkbox"></span>
+                            Марципана укусила соседская собака Рекс </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_3" value="2">
+                            <span class="checkbox"></span>
+                            С Марципаном ничего не случилось, кот здоров </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_3" value="3">
+                            <span class="checkbox"></span>
+                            Марципана сбил на машине Вальдемар </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_3" value="4">
+                            <span class="checkbox"></span>
+                            Марципана отравил Каспер Клаус </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_3" value="5">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-3" class="prev-question-btn btn red_btn" data-question="3">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-3" class="checkversion-btn btn red_btn" data-question="3">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-3" class="next-question-btn btn red_btn" data-question="3" data-next="4"
+                            style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-4" data-question="4" style="display:none;">
+
+                      <h3 class="title">4. Кто обманул Каспера Клауса?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_4" value="0">
+                            <span class="checkbox"></span>
+                            Феликс Фрост </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_4" value="1">
+                            <span class="checkbox"></span>
+                            Он сам всё подстроил </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_4" value="2">
+                            <span class="checkbox"></span>
+                            Вальдемар </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_4" value="3">
+                            <span class="checkbox"></span>
+                            Морган Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_4" value="4">
+                            <span class="checkbox"></span>
+                            Габриэль Гримм </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_4" value="5">
+                            <span class="checkbox"></span>
+                            Тамара Томпсон </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_4" value="6">
+                            <span class="checkbox"></span>
+                            Марина Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_4" value="7">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-4" class="prev-question-btn btn red_btn" data-question="4">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-4" class="checkversion-btn btn red_btn" data-question="4">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-4" class="next-question-btn btn red_btn" data-question="4" data-next="5"
+                            style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-5" data-question="5" style="display:none;">
+
+                      <h3 class="title">5. Кто автор послания с угрозой?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_5" value="0">
+                            <span class="checkbox"></span>
+                            Тамара Томпсон </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_5" value="1">
+                            <span class="checkbox"></span>
+                            Вальдемар </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_5" value="2">
+                            <span class="checkbox"></span>
+                            Морган Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_5" value="3">
+                            <span class="checkbox"></span>
+                            Габриэль Гримм </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_5" value="4">
+                            <span class="checkbox"></span>
+                            Феликс Фрост </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_5" value="5">
+                            <span class="checkbox"></span>
+                            Марина Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_5" value="6">
+                            <span class="checkbox"></span>
+                            Каспер Клаус </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_5" value="7">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-5" class="prev-question-btn btn red_btn" data-question="5">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-5" class="checkversion-btn btn red_btn" data-question="5">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-5" class="next-question-btn btn red_btn" data-question="5" data-next="6"
+                            style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-6" data-question="6" style="display:none;">
+
+                      <h3 class="title">6. Кто избежал покушения на свою жизнь?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_6" value="0">
+                            <span class="checkbox"></span>
+                            Тамара Томпсон </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_6" value="1">
+                            <span class="checkbox"></span>
+                            Вальдемар </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_6" value="2">
+                            <span class="checkbox"></span>
+                            Морган Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_6" value="3">
+                            <span class="checkbox"></span>
+                            Габриэль Гримм </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_6" value="4">
+                            <span class="checkbox"></span>
+                            Феликс Фрост </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_6" value="5">
+                            <span class="checkbox"></span>
+                            Марина Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_6" value="6">
+                            <span class="checkbox"></span>
+                            Каспер Клаус </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_6" value="7">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-6" class="prev-question-btn btn red_btn" data-question="6">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-6" class="checkversion-btn btn red_btn" data-question="6">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-6" class="next-question-btn btn red_btn" data-question="6" data-next="7"
+                            style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-7" data-question="7" style="display:none;">
+
+                      <h3 class="title">7. В чём смысл послания с угрозой?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_7" value="0">
+                            <span class="checkbox"></span>
+                            Морган Морзе узнал, кто ограбил булочную </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_7" value="1">
+                            <span class="checkbox"></span>
+                            Морган Морзе узнал, кто убил Марципана </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_7" value="2">
+                            <span class="checkbox"></span>
+                            Морган Морзе узнал участников происшествия из выпуска новостей </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_7" value="3">
+                            <span class="checkbox"></span>
+                            Морган Морзе раскрыл аферу с Каспером Клаусом </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_7" value="4">
+                            <span class="checkbox"></span>
+                            Морган Морзе понял, кто подделал любовное письмо, адресованное Марине </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_7" value="5">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-7" class="prev-question-btn btn red_btn" data-question="7">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-7" class="checkversion-btn btn red_btn" data-question="7">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-7" class="next-question-btn btn red_btn" data-question="7" data-next="8"
+                            style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-8" data-question="8" style="display:none;">
+
+                      <h3 class="title">8. Кто, кому и зачем звонил 18 мая в 18:33? </h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_8" value="0">
+                            <span class="checkbox"></span>
+                            Тамара Томпсон звонила Моргану Морзе, чтобы признаться в любви </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_8" value="1">
+                            <span class="checkbox"></span>
+                            Вальдемар звонил Тамаре Томпсон, чтобы напомнить о долге </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_8" value="2">
+                            <span class="checkbox"></span>
+                            Морган Морзе звонил Феликсу напомнить об ужине </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_8" value="3">
+                            <span class="checkbox"></span>
+                            Диего Донован звонил Габриэль сообщить об увольнении </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_8" value="4">
+                            <span class="checkbox"></span>
+                            Феликс Фрост звонил Кристоферу выведать подробности его жизни </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_8" value="5">
+                            <span class="checkbox"></span>
+                            Каспер Клаус звонил в полицию с требованием освободить внука </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_8" value="6">
+                            <span class="checkbox"></span>
+                            Марина Морзе звонила Моргану сообщить, что она жива </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_8" value="7">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-8" class="prev-question-btn btn red_btn" data-question="8">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-8" class="checkversion-btn btn red_btn" data-question="8">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-8" class="next-question-btn btn red_btn" data-question="8" data-next="9"
+                            style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-9" data-question="9" style="display:none;">
+
+                      <h3 class="title">9. Что именно заснял коптер газеты “Хроники Бёрдхилла”?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_9" value="0">
+                            <span class="checkbox"></span>
+                            Как Марина и Феликс делили похищенные из булочной деньги </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_9" value="1">
+                            <span class="checkbox"></span>
+                            Тайное свидание Тамары и Моргана </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_9" value="2">
+                            <span class="checkbox"></span>
+                            Ограбление с захватом заложника </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_9" value="3">
+                            <span class="checkbox"></span>
+                            Ролевую игру с участием Габриэль и Бобби Блэйка </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_9" value="4">
+                            <span class="checkbox"></span>
+                            Съёмку детективного сериала </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_9" value="5">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-9" class="prev-question-btn btn red_btn" data-question="9">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-9" class="checkversion-btn btn red_btn" data-question="9">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-9" class="next-question-btn btn red_btn" data-question="9" data-next="10"
+                            style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-10" data-question="10" style="display:none;">
+
+                      <h3 class="title">10. Кто ограбил булочную Ланжелье?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_10" value="0">
+                            <span class="checkbox"></span>
+                            Тамара Томпсон </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_10" value="1">
+                            <span class="checkbox"></span>
+                            Вальдемар </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_10" value="2">
+                            <span class="checkbox"></span>
+                            Морган Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_10" value="3">
+                            <span class="checkbox"></span>
+                            Габриэль Гримм </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_10" value="4">
+                            <span class="checkbox"></span>
+                            Феликс Фрост </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_10" value="5">
+                            <span class="checkbox"></span>
+                            Марина Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_10" value="6">
+                            <span class="checkbox"></span>
+                            Каспер Клаус </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_10" value="7">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-10" class="prev-question-btn btn red_btn" data-question="10">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-10" class="checkversion-btn btn red_btn" data-question="10">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-10" class="next-question-btn btn red_btn" data-question="10"
+                            data-next="11" style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-11" data-question="11" style="display:none;">
+
+                      <h3 class="title">11. Кому адресовано послание с угрозой?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_11" value="0">
+                            <span class="checkbox"></span>
+                            Тамаре Томпсон </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_11" value="1">
+                            <span class="checkbox"></span>
+                            Вальдемару </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_11" value="2">
+                            <span class="checkbox"></span>
+                            Моргану Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_11" value="3">
+                            <span class="checkbox"></span>
+                            Габриэль Гримм </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_11" value="4">
+                            <span class="checkbox"></span>
+                            Феликсу Фросту </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_11" value="5">
+                            <span class="checkbox"></span>
+                            Марине Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_11" value="6">
+                            <span class="checkbox"></span>
+                            Касперу Клаусу </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_11" value="7">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-11" class="prev-question-btn btn red_btn" data-question="11">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-11" class="checkversion-btn btn red_btn" data-question="11">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-11" class="next-question-btn btn red_btn" data-question="11"
+                            data-next="12" style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-12" data-question="12" style="display:none;">
+
+                      <h3 class="title">12. Вы узнали данные для сайта i-home и воспользовались ими?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_12" value="0">
+                            <span class="checkbox"></span>
+                            Нет </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_12" value="1">
+                            <span class="checkbox"></span>
+                            Да </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_12" value="2">
+                            <span class="checkbox"></span>
+                            Не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-12" class="prev-question-btn btn red_btn" data-question="12">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-12" class="checkversion-btn btn red_btn" data-question="12">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-12" class="next-question-btn btn red_btn" data-question="12"
+                            data-next="13" style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-13" data-question="13" style="display:none;">
+
+                      <h3 class="title">13. Кто оставил сообщение в системе умного дома? </h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_13" value="0">
+                            <span class="checkbox"></span>
+                            Тамара Томпсон </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_13" value="1">
+                            <span class="checkbox"></span>
+                            Вальдемар </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_13" value="2">
+                            <span class="checkbox"></span>
+                            Морган Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_13" value="3">
+                            <span class="checkbox"></span>
+                            Габриэль Гримм </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_13" value="4">
+                            <span class="checkbox"></span>
+                            Феликс Фрост </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_13" value="5">
+                            <span class="checkbox"></span>
+                            Марина Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_13" value="6">
+                            <span class="checkbox"></span>
+                            Каспер Клаус </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_13" value="7">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-13" class="prev-question-btn btn red_btn" data-question="13">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-13" class="checkversion-btn btn red_btn" data-question="13">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-13" class="next-question-btn btn red_btn" data-question="13"
+                            data-next="14" style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-14" data-question="14" style="display:none;">
+
+                      <h3 class="title">14. Какова причина смерти Моргана Морзе?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_14" value="0">
+                            <span class="checkbox"></span>
+                            Отравление ртутью </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_14" value="1">
+                            <span class="checkbox"></span>
+                            ДТП </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_14" value="2">
+                            <span class="checkbox"></span>
+                            Огнестрельное ранение </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_14" value="3">
+                            <span class="checkbox"></span>
+                            Сердечный приступ </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_14" value="4">
+                            <span class="checkbox"></span>
+                            Кессонная болезнь </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_14" value="5">
+                            <span class="checkbox"></span>
+                            Панкреатит </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_14" value="6">
+                            <span class="checkbox"></span>
+                            Я не знаю. Помогите! </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-14" class="prev-question-btn btn red_btn" data-question="14">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-14" class="checkversion-btn btn red_btn" data-question="14">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-14" class="next-question-btn btn red_btn" data-question="14"
+                            data-next="15" style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+                    <div class="version question-block" id="question-15" data-question="15" style="display:none;">
+
+                      <h3 class="title">15. Кто спровоцировал сердечный приступ Моргана Морзе?</h3>
+
+                      <div class="answers_block">
+                        <div class="answers_list">
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_15" value="0">
+                            <span class="checkbox"></span>
+                            Тамара Томпсон </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_15" value="1">
+                            <span class="checkbox"></span>
+                            Вальдемар </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_15" value="2">
+                            <span class="checkbox"></span>
+                            Морган Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_15" value="3">
+                            <span class="checkbox"></span>
+                            Габриэль Гримм </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_15" value="4">
+                            <span class="checkbox"></span>
+                            Феликс Фрост </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_15" value="5">
+                            <span class="checkbox"></span>
+                            Марина Морзе </label>
+
+                          <label class="answer-option ">
+                            <input type="radio" name="answer_15" value="6">
+                            <span class="checkbox"></span>
+                            Каспер Клаус </label>
+                        </div>
+
+                        <div class="buttons-group">
+                          <button id="prev-btn-15" class="prev-question-btn btn red_btn" data-question="15">
+                            Предыдущий вопрос
+                          </button>
+
+                          <button id="check-btn-15" class="checkversion-btn btn red_btn" data-question="15">
+                            Проверить версию
+                          </button>
+
+                          <button id="next-btn-15" class="next-question-btn btn red_btn" data-question="15"
+                            data-next="16" style="display:none;">
+                            Следующий вопрос
+                          </button>
+                        </div>
+                        <div class="response-message" style="display:none;"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+
+                <div id="task" class="tab-pane fade" role="tabpanel" aria-labelledby="task-tab">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="hints-container-wrapper">
+                          <div id="hints-container">
+
+
+                            <div class="first-hint-wrapper">
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="1-0">
+                                <span class="checkbox"></span>
+                                Порядок посещения квартир </label>
+                            </div>
+
+
+                            <div class="hint-group">
+                              <h3>Отдельные документы</h3>
+
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="2-0">
+                                <span class="checkbox"></span>
+                                Фото домофона </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="2-1">
+                                <span class="checkbox"></span>
+                                Путеводитель </label>
+                            </div>
+
+
+
+                            <div class="hint-group">
+                              <h3>Конверт Морзе</h3>
+
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="3-0">
+                                <span class="checkbox"></span>
+                                Жалоба на корм </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="3-1">
+                                <span class="checkbox"></span>
+                                Фото ящика с термометрами </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="3-2">
+                                <span class="checkbox"></span>
+                                Открытка от коллеги </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="3-3">
+                                <span class="checkbox"></span>
+                                Открытка из путешествия </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="3-4">
+                                <span class="checkbox"></span>
+                                Календарь апрель-май </label>
+                            </div>
+
+
+
+                            <div class="hint-group">
+                              <h3>Конверт Гримм</h3>
+
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="4-0">
+                                <span class="checkbox"></span>
+                                Ежедневник </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="4-1">
+                                <span class="checkbox"></span>
+                                Билет в кино </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="4-2">
+                                <span class="checkbox"></span>
+                                Скриншот онлайн-банка </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="4-3">
+                                <span class="checkbox"></span>
+                                Скриншот телефонных звонков </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="4-4">
+                                <span class="checkbox"></span>
+                                Приглашение на День Рождения </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="4-5">
+                                <span class="checkbox"></span>
+                                Скриншот переписки с Мариной </label>
+                            </div>
+
+
+
+                            <div class="hint-group">
+                              <h3>Конверт Томпсон</h3>
+
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="5-0">
+                                <span class="checkbox"></span>
+                                Газета </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="5-1">
+                                <span class="checkbox"></span>
+                                Скриншот переписки с Морганом (2 фото) </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="5-2">
+                                <span class="checkbox"></span>
+                                Фото рабочего стола </label>
+                            </div>
+
+
+
+                            <div class="hint-group">
+                              <h3>Конверт Фрост</h3>
+
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="6-0">
+                                <span class="checkbox"></span>
+                                Скриншот домового чата (5 фото) </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="6-1">
+                                <span class="checkbox"></span>
+                                Фото с настольными играми </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="6-2">
+                                <span class="checkbox"></span>
+                                Фото с заметками </label>
+                            </div>
+
+
+
+                            <div class="hint-group">
+                              <h3>Конверт Вандервельде - Вандерлинден</h3>
+
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="7-0">
+                                <span class="checkbox"></span>
+                                Послание с угрозой </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="7-1">
+                                <span class="checkbox"></span>
+                                Выписка по счёту </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="7-2">
+                                <span class="checkbox"></span>
+                                Письмо от компании “Атмосфера” </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="7-3">
+                                <span class="checkbox"></span>
+                                Результат кардиообследования </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="7-4">
+                                <span class="checkbox"></span>
+                                Письмо от газеты “Хроники Бёрдхилла” </label>
+                            </div>
+
+
+
+                            <div class="hint-group">
+                              <h3>Конверт Клаус</h3>
+
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="8-0">
+                                <span class="checkbox"></span>
+                                Чек из аптеки </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="8-1">
+                                <span class="checkbox"></span>
+                                Фото комода с телефоном </label>
+                            </div>
+
+
+
+                            <div class="hint-group">
+                              <h3>Цифровые ресурсы</h3>
+
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="9-0">
+                                <span class="checkbox"></span>
+                                Сайт для набора номеров телефона </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="9-1">
+                                <span class="checkbox"></span>
+                                Звонок Диего Доновану </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="9-2">
+                                <span class="checkbox"></span>
+                                Звонок в “Атмосферу” </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="9-3">
+                                <span class="checkbox"></span>
+                                Звонок Кристоферу </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="9-4">
+                                <span class="checkbox"></span>
+                                Звонок на автоответчик </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="9-5">
+                                <span class="checkbox"></span>
+                                Звонок Анне Арчер </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="9-6">
+                                <span class="checkbox"></span>
+                                Астрологический сайт </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="9-7">
+                                <span class="checkbox"></span>
+                                Сайт Дня Рождения </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="9-8">
+                                <span class="checkbox"></span>
+                                Сайт газеты “Хроники Бёрдхилла” </label>
+                              <label class="hint-option">
+                                <input type="radio" name="selected_hint" class="hint-radio" value="9-9">
+                                <span class="checkbox"></span>
+                                Сайт умного дома i-home </label>
+                            </div>
+
+                          </div>
+                          <div id="hint-result-text" class="alert alert-info" style="display: none;"></div>
+
+                          <div class="hint-buttons">
+                            <button id="get-hint-btn" class="btn red_btn" disabled="">
+                              Подсказка
+                            </button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div id="opis" class="tab-pane fade" role="tabpanel" aria-labelledby="opis-tab">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="opis-container-wrapper">
+                          <div class="opis-header">
+                            Документы помечены буквой, соответствующей фамилии каждого из жильцов дома, чтобы вы легко
+                            могли определить, в какой квартире они были найдены.
+                          </div>
+                          <div id="opis-container">
+                            <div class="hint-group" style="margin-top:0;">
+                              <h3>Отдельные документы:</h3>
+                              <audio controls src="./audio/start.mp3" type="audio/mp3" id="audio-start"></audio>
+                              <ul>
+                                <li>Инструкция</li>
+                                <li>Путеводитель</li>
+                                <li>Фото домофона</li>
+                                <li>План дома</li>
+                                <li>Фото Геркулеса Буаро</li>
+                              </ul>
+                            </div>
+                            <div class="hint-group">
+                              <h3>Конверт Морзе:</h3>
+                              <audio controls src="./audio/morgan-morze.mp3" type="audio/mp3"
+                                id="audio-morgan-morze"></audio>
+                              <ul>
+                                <li>Фото Моргана Морзе</li>
+                                <li>Фото Марины Морзе</li>
+                                <li>Фото Марципана</li>
+                                <li>План квартиры</li>
+                                <li>Жалоба на корм</li>
+                                <li>Фото ящика с термометрами</li>
+                                <li>Открытка от коллеги</li>
+                                <li>Открытка из путешествия</li>
+                                <li>Календарь апрель-май</li>
+                              </ul>
+                            </div>
+                            <div class="hint-group">
+                              <h3>Конверт Гримм:</h3>
+                              <audio controls src="./audio/grim.mp3" type="audio/mp3" id="audio-grim"></audio>
+                              <ul>
+                                <li>Фото Габриэль Гримм</li>
+                                <li>Фото Генриетты Гримм</li>
+                                <li>План квартиры</li>
+                                <li>Ежедневник</li>
+                                <li>Билет в кино</li>
+                                <li>Скриншот онлайн-банка</li>
+                                <li>Скриншот телефонных звонков</li>
+                                <li>Приглашение на день рождения</li>
+                                <li>Скриншот переписки с Мариной</li>
+                              </ul>
+                            </div>
+                            <div class="hint-group">
+                              <h3>Конверт Томпсон:</h3>
+                              <audio controls src="./audio/tompson.mp3" type="audio/mp3" id="audio-tompson"></audio>
+                              <ul>
+                                <li>Фото Тамары Томпсон</li>
+                                <li>План квартиры</li>
+                                <li>Газета</li>
+                                <li>Скриншот переписки с Морганом (2 фото)</li>
+                                <li>Фото рабочего стола</li>
+                              </ul>
+                            </div>
+                            <div class="hint-group">
+                              <h3>Конверт Фрост:</h3>
+                              <audio controls src="./audio/frost.mp3" type="audio/mp3" id="audio-frost"></audio>
+                              <ul>
+                                <li>Фото Феликса Фроста</li>
+                                <li>План квартиры</li>
+                                <li>Скриншот домового чата (5 фото)</li>
+                                <li>Фото с настольными играми</li>
+                                <li>Фото с заметками</li>
+                              </ul>
+                            </div>
+                            <div class="hint-group">
+                              <h3>Конверт Вандервельде - Вандерлинден:</h3>
+                              <audio controls src="./audio/valdemar.mp3" type="audio/mp3" id="audio-valdemar"></audio>
+                              <ul>
+                                <li>Фото Вальдемара</li>
+                                <li>План Квартиры</li>
+                                <li>Послание с угрозой</li>
+                                <li>Выписка по счету</li>
+                                <li>Письмо от компании “Атмосфера”</li>
+                                <li>Результат кардиообследования</li>
+                                <li>Письмо от газеты “Хроники Бёрдхилла”</li>
+                              </ul>
+                            </div>
+                            <div class="hint-group">
+                              <h3>Конверт Клаус:</h3>
+                              <audio controls src="./audio/casper_klaus.mp3" type="audio/mp3"
+                                id="audio-casper-klaus"></audio>
+                              <ul>
+                                <li>Фото Каспера Клауса</li>
+                                <li>План квартиры</li>
+                                <li>Чек из аптеки</li>
+                                <li>Фото комода с телефоном</li>
+                              </ul>
+                            </div>
+                            <div class="hint-group">
+                              <h3>Финальный конверт:</h3>
+                              <audio controls src="./audio/final.mp3" type="audio/mp3" id="audio-final"></audio>
+                              <ul>
+                                <li>Финальный чек-лист</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="phone" class="tab-pane fade" role="tabpanel" aria-labelledby="phone-tab">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="phone_wrapper">
+                          <div class="phone-window">
+                            <div class="display">
+                              <input disabled="" id="main-number" class="">
+                              <div id="extra-code" style="display: none;"></div>
+                              <div id="timer" disabled="" class="">00:00</div>
+                            </div>
+                            <div id="keypad">
+                              <div class="keypad">
+                                <button class="num" data-num="1">1</button>
+                                <button class="num" data-num="2">2</button>
+                                <button class="num" data-num="3">3</button>
+                                <button class="num" data-num="4">4</button>
+                                <button class="num" data-num="5">5</button>
+                                <button class="num" data-num="6">6</button>
+                                <button class="num" data-num="7">7</button>
+                                <button class="num" data-num="8">8</button>
+                                <button class="num" data-num="9">9</button>
+                                <button class="num" data-num="+">+</button>
+                                <button class="num" data-num="0">0</button>
+                                <button class="num" data-num="#">#</button>
+                                <button class="qr-btn" id="qr-trigger">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="70px" height="70px"
+                                    viewBox="0 0 24 24" data-name="Layer 1">
+                                    <path
+                                      d="M8,21H4a1,1,0,0,1-1-1V16a1,1,0,0,0-2,0v4a3,3,0,0,0,3,3H8a1,1,0,0,0,0-2Zm14-6a1,1,0,0,0-1,1v4a1,1,0,0,1-1,1H16a1,1,0,0,0,0,2h4a3,3,0,0,0,3-3V16A1,1,0,0,0,22,15ZM20,1H16a1,1,0,0,0,0,2h4a1,1,0,0,1,1,1V8a1,1,0,0,0,2,0V4A3,3,0,0,0,20,1ZM2,9A1,1,0,0,0,3,8V4A1,1,0,0,1,4,3H8A1,1,0,0,0,8,1H4A3,3,0,0,0,1,4V8A1,1,0,0,0,2,9Zm8-4H6A1,1,0,0,0,5,6v4a1,1,0,0,0,1,1h4a1,1,0,0,0,1-1V6A1,1,0,0,0,10,5ZM9,9H7V7H9Zm5,2h4a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H14a1,1,0,0,0-1,1v4A1,1,0,0,0,14,11Zm1-4h2V9H15Zm-5,6H6a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1h4a1,1,0,0,0,1-1V14A1,1,0,0,0,10,13ZM9,17H7V15H9Zm5-1a1,1,0,0,0,1-1,1,1,0,0,0,0-2H14a1,1,0,0,0-1,1v1A1,1,0,0,0,14,16Zm4-3a1,1,0,0,0-1,1v3a1,1,0,0,0,0,2h1a1,1,0,0,0,1-1V14A1,1,0,0,0,18,13Zm-4,4a1,1,0,1,0,1,1A1,1,0,0,0,14,17Z" />
+                                  </svg>
+                                </button>
+                                <button class="call-btn" id="call-trigger">
+                                  <svg fill="#fff" transform="scale(-1 1)" viewBox="0 0 32 32">
+                                    <path fill="#fff" fill-rule="evenodd"
+                                      d="m31.073 4.433-2.878-2.87a2.04 2.04 0 0 0-2.878 0L21 7.303c-.659.971-.794 2.077 0 2.87l1.762 1.757c-1.306 1.75-2.874 3.658-4.639 5.418-1.996 1.99-4.216 3.799-6.212 5.285l-1.703-1.697c-.794-.793-1.903-.659-2.878 0l-5.756 4.305c-.965.665-.795 2.077 0 2.87l2.878 2.869c1.59 1.586 3.657 1.078 5.756 0 0 0 6.353-3.556 11.792-8.98 5.116-5.102 9.073-11.827 9.073-11.827.825-2.263 1.59-4.155 0-5.74" />
+                                  </svg>
+                                </button>
+                                <button class="delete-btn" id="del-btn">
+                                  <svg xmlns="http://www.w3.org/2000/svg"
+                                    data-guides="{&quot;vertical&quot;:[],&quot;horizontal&quot;:[]}"
+                                    viewBox="0 0 44 30">
+                                    <path fill="#fff" stroke="#fff" stroke-width="3"
+                                      d="M41.002 15.005v10a2 2 0 0 1-2 2H15.82a2 2 0 0 1-1.357-.532l-10.82-10a2 2 0 0 1 0-2.937l10.82-10a2 2 0 0 1 1.357-.532h23.182a2 2 0 0 1 2 2Z" />
+                                    <path stroke="#000"
+                                      d="m30.376 15.19 5.53-5.5c.805-.8.805-2 0-2.8-.3-.4-.804-.7-1.306-.7-.503 0-1.006.2-1.408.6l-5.632 5.6-5.53-5.5c-.805-.8-2.112-.8-2.816 0-.402.3-.704.8-.704 1.4s.201 1 .603 1.4l5.531 5.5-5.53 5.5c-.302.4-.604.9-.604 1.5 0 .5.201 1 .603 1.4.403.4.905.6 1.408.6s1.006-.2 1.408-.6l5.53-5.5 5.531 5.5c.805.8 2.112.8 2.816 0 .805-.8.805-2.1 0-2.8z" />
+                                  </svg>
+                                </button>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module">
+    import { answers } from './js/answers.js';
+
+    // Простой jQuery для табов
+    $(document).ready(function () {
+
+      $('.nav-link[data-bs-toggle="tab"]').on('click', function (e) {
+        e.preventDefault();
+        var target = $(this).data('bs-target');
+        var navItem = $(this).closest('.nav-item');
+
+        $('.nav-link[data-bs-toggle="tab"]').removeClass('active');
+        $('.nav-item').removeClass('active');
+
+        $('.tab-pane').removeClass('show active');
+
+        $(this).addClass('active');
+        $(target).addClass('show active');
+        navItem.addClass('active');
+
+        localStorage.setItem('activeTab', target);
+      });
+
+      // Восстанавливаем активную вкладку при загрузке страницы
+      var savedTab = localStorage.getItem('activeTab');
+      if (savedTab) {
+        // Убираем активные классы
+        $('.nav-link[data-bs-toggle="tab"]').removeClass('active');
+        $('.nav-item').removeClass('active');
+        $('.tab-pane').removeClass('show active');
+
+        // Активируем сохраненную вкладку
+        var tabLink = $('.nav-link[data-bs-toggle="tab"][data-bs-target="' + savedTab + '"]');
+        if (tabLink.length) {
+          tabLink.addClass('active');
+          tabLink.closest('.nav-item').addClass('active');
+          $(savedTab).addClass('show active');
+        }
+      }
+      //бургер
+      const burger = $('#burgerToggle');
+      const menu = $('#navMenu');
+
+      burger.on('click', function () {
+        menu.toggleClass('is-active');
+        burger.toggleClass('open');
+      });
+
+      // Восстанавливаем сохраненные ответы
+      for (let i = 1; i <= 15; i++) {
+        let savedAnswer = localStorage.getItem('answered_' + i);
+        if (savedAnswer) {
+          let qBlock = $('#question-' + i);
+          let radio = qBlock.find('input[type="radio"][value="' + savedAnswer + '"]');
+
+          if (radio.length) {
+            radio.prop('checked', true);
+            qBlock.find('input[type="radio"]').prop('disabled', true);
+            radio.closest('.answer-option').addClass('correct');
+
+            $('#check-btn-' + i).hide();
+
+            const qAnswers = answers[i];
+            const responseObj = qAnswers ? qAnswers.find(a => String(a.answerIndex) === String(savedAnswer)) : null;
+
+            if (responseObj) {
+              showMessage(qBlock, responseObj.message, 'success');
+              if (!responseObj.isComplete) {
+                $('#next-btn-' + i).show();
+              }
+            }
+          }
+        }
+      }
+
+      // Восстанавливаем текущий вопрос
+      let currentQ = localStorage.getItem('currentQuestion') || '1';
+      $('.question-block').hide();
+      $('#question-' + currentQ).show();
+
+    });
+
+
+    // Проверка ответа
+    $(document).on('click', '.checkversion-btn', function () {
+
+      var questionBlock = $(this).closest('.question-block');
+      var questionNum = $(this).data('question');
+      var selectedAnswer = questionBlock.find('input[type="radio"]:checked');
+      var selectedCheck = selectedAnswer.closest('.answer-option');
+
+      if (!selectedAnswer.length) {
+        showMessage(questionBlock, 'Выберите вариант ответа!', 'warning');
+        return;
+      }
+
+      var answerIndex = selectedAnswer.val();
+      console.log(selectedCheck);
+      // Блокируем кнопку на время запроса
+      $('#check-btn-' + questionNum).prop('disabled', true);
+
+      var messageDiv = questionBlock.find('.response-message');
+      var existingTimeout = messageDiv.data('errorTimeout');
+
+      // Локальная проверка ответа
+      const qAnswers = answers[questionNum];
+      const responseObj = qAnswers ? qAnswers.find(a => String(a.answerIndex) === String(answerIndex)) : null;
+
+      setTimeout(function () {
+        if (!responseObj) {
+          console.error('Ответ не найден в базе');
+          showMessage(questionBlock, 'Произошла ошибка. Попробуйте еще раз.', 'error');
+          $('#check-btn-' + questionNum).prop('disabled', false).text('Проверить версию');
+          return;
+        }
+
+        if (responseObj.correct) {
+          // Правильный ответ
+          localStorage.setItem('answered_' + questionNum, answerIndex); // Сохраняем в локалсторідж
+
+          showMessage(questionBlock, responseObj.message, 'success');
+          $('#check-btn-' + questionNum).hide();
+          questionBlock.find('input[type="radio"]').prop('disabled', true);
+          selectedCheck.addClass('correct');
+
+          if (responseObj.isComplete) {
+            // Игра завершена
+            $('#next-btn-' + questionNum).hide();
+          } else {
+            // Показываем кнопку "Следующий вопрос"
+            $('#next-btn-' + questionNum).show();
+          }
+        } else {
+          // Неправильный ответ
+          showMessage(questionBlock, responseObj.message, 'error');
+          selectedCheck.addClass('error');
+
+          // Разблокируем кнопку
+          $('#check-btn-' + questionNum).prop('disabled', false).text('Проверить версию');
+        }
+      }, 300); // Небольшая задержка для имитации загрузки
+    });
+
+    // Переход к следующему вопросу
+    $(document).on('click', '.next-question-btn', function () {
+      var currentBlock = $(this).closest('.question-block');
+      var nextQuestionNum = $(this).data('next');
+      var nextBlock = $('#question-' + nextQuestionNum);
+
+      if (nextBlock.length) {
+        // Локальное переключение
+        localStorage.setItem('currentQuestion', nextQuestionNum);
+        currentBlock.hide();
+        nextBlock.show();
+        console.log('Показан вопрос: question-' + nextQuestionNum);
+      }
+    });
+
+    // Возврат к предыдущему вопросу
+    $(document).on('click', '.prev-question-btn', function () {
+      var currentBlock = $(this).closest('.question-block');
+      var questionNum = $(this).data('question');
+      var prevQuestionNum = parseInt(questionNum) - 1;
+      var prevBlock = $('#question-' + prevQuestionNum);
+
+      if (prevBlock.length) {
+        localStorage.setItem('currentQuestion', prevQuestionNum);
+        currentBlock.hide();
+        prevBlock.show();
+        console.log('Переход к предыдущему вопросу: question-' + prevQuestionNum);
+      }
+    });
+
+    // Вспомогательная функция для показа сообщений
+    function showMessage(block, message, type) {
+      var messageDiv = block.find('.response-message');
+
+      messageDiv
+        .removeClass('success error warning')
+        .addClass(type)
+        .html(message)
+        .show();
+    }
+
+    //подсказки
+    $(document).ready(function () {
+      const allHints = { "1": { "title": "", "hint": [{ "name": "Порядок посещения квартир", "message": ["Вы можете посещать квартиры и опрашивать соседей в любом порядке, но для более логичного развития событий рекомендуем следующую последовательность: Морзе, Гримм, Томпсон, Фрост, Вандервельде-Вандерлинден, Клаус."] }] }, "2": { "title": "Отдельные документы", "hint": [{ "name": "Фото домофона", "message": ["Так здорово, что каждый из жильцов дома самостоятельно написал своё имя у звонка в квартиру, вы не находите? ", "На этом фото образцы почерка всех жильцов. Теперь вы сможете определить авторство документов, полученных в процессе расследования. "] }, { "name": "Путеводитель", "message": "Благодаря этому путеводителю у вас есть настоящая карта города. Находите на ней адреса из расследования, это вам очень поможет.\r\n                    <br>Также информация из путеводителя поможет вам ответить на несколько вопросов кроссворда." }] }, "3": { "title": "Конверт Морзе", "hint": [{ "name": "Жалоба на корм", "message": ["Сопоставьте письмо с записями Моргана в календаре. Теперь становится понятно, что обозначает еженедельная отметка “Шелби”.", "Похоже, упаковку с кормом повредили намеренно. Используя другие документы определите, кому и зачем это было нужно?"] }, { "name": "Фото ящика с термометрами", "message": ["Определите, кто автор любовного послания?<br>Вам не кажется странным такое количество ртутных термометров? Прочитайте частные объявления в газете.", "Помимо прочего, в ящике лежат почтовые марки. Именно их просила одолжить у Моргана Тамара Томпсон в телефонной переписке. Может, дело не в почтовых марках, а в том, чтобы Морган заглянул в ящик?", "В квартире Тамары Томпсон инспектор обнаружил листок бумаги, на котором она училась писать почерком Феликса Фроста. Тамара написала поддельное любовное письмо, адресованное Марине, супруге Моргана. На встрече у Моргана дома Тамара незаметно положила письмо в ящик с почтовыми марками. А уже позднее в телефонной переписке попросила Моргана одолжить ей почтовые марки. Морган, конечно же, увидел подброшенное письмо. Тамара тем самым хотела поссорить супругов и вызвать ревность у соседа, к которому неровно дышала."] }, { "name": "Открытка от коллеги", "message": ["В первую очередь, эта открытка поможет вам ответить на один из вопросов кроссворда. ", "Как вы можете понять по подписи на обратной стороне открытки, изображенный на кружке ворон является символом Бёрдхилла.", "Эта открытка очень поможет вам на позднем этапе расследования. "] }, { "name": "Открытка из путешествия", "message": ["Какая красивая сумка, не правда ли? Где ещё вы могли её видеть?", "Внимательно посмотрите на домовой чат. Разве не эту же сумку Морган оставил на площадке для Габриэль?", "Эта открытка поможет узнать пароль к одному из цифровых ресурсов. "] }, { "name": "Календарь апрель-май", "message": ["Похоже, Марина и Морган использовали один семейный календарь. Определите по почерку принадлежность каждой записи. Образцы почерка можно найти на домофоне с фамилиями.", "Марина посещала курсы по плаванию для начинающих. Можно ли её считать хорошим пловцом?<br>Морган каждую неделю оставлял заметку “Шелби”. Вам удалось понять, что она значит?<br>Морган регулярно ужинает со своим соседом Феликсом. Кажется, на 23 число он планировал приготовить что-то особенное? "] }] }, "4": { "title": "Конверт Гримм", "hint": [{ "name": "Ежедневник", "message": ["Что за коды записывала Габриэль? Вы уже смогли найти им применение?<br>Также обратите внимание на день рождения Моргана Морзе. ", "Габриэль работала в ивент-агентстве “Атмосфера”. Телефон этой компании есть в газете. Каждому клиенту компании присваивается код. Именно эти коды и записаны в ежедневнике. Используйте их, чтобы получить дополнительную информацию от звонка в “Атмосферу”. Вводите только числовые значения."] }, { "name": "Билет в кино", "message": ["Является ли этот билет в кино алиби для Габриэль?<br>Обратная сторона билета очень важна.", "Габриэль в разговоре с инспектором сказала, что в момент убийства Моргана была в кино. Билет подтверждает её слова, потому что на нём стоит печать “Контроль пройден”.<br>Реклама магазина сладостей на обратной стороне билета поможет вам ответить на один из вопросов кроссворда. "] }, { "name": "Скриншот онлайн-банка", "message": ["Обратите внимание на поступления денежных средств на счёт Габриэль. Что вы можете о них сказать?", "Габриэль в течение нескольких дней вносила небольшими суммами денежные средства на свой счет. Сколько всего денег было внесено?", "Если вы сложите все поступившие на счёт средства, то у вас получится сумма 2765 шерлоков. Где ещё упоминается именно эта сумма?", "В одном из конвертов вы найдёте газету, где есть статья об ограблении булочной Ланжелье, из которой было похищено ровно 2765 шерлоков. Неужели Габриэль имеет к этому отношение?"] }, { "name": "Скриншот телефонных звонков", "message": ["Один из входящих звонков от Диего Донована. Кто это? Может, стоит ему позвонить?", "Во время звонка Диего Донован подтверждает, что последний раз общался с Габриэль по телефону 18 мая в 18:33. Он говорит о плохих новостях и о том, что всё подробно написал в письме. Если вы не видели этого письма, значит вы ещё не посетили все квартиры. ", "Диего Донован – руководитель ивент-агентства “Атмосфера”, в котором работала Габриэль. 18 мая в 18:33 он позвонил девушке и сообщил что она уволена. Все подробности Диего указал в письме, которое было перехвачено Вальдемаром. Похоже, у Габриэль 18 мая был не самый лучший день. "] }, { "name": "Приглашение на День Рождения", "message": ["Для того, чтобы разгадать кроссворд, вам нужно побывать во всех квартирах.<br>Полученное в кроссворде слово будет кодом доступа для сайта дня рождения. ", "Ответы на вопросы кроссворда вы найдёте в следующих документах:<br><ol>\r\n              <li>Газета из квартиры Тамары или домовой чат<\/li>\r\n              <li>Чек из аптеки из квартиры Каспера<\/li>\r\n              <li>Газета из квартиры Тамары <\/li>\r\n              <li>Путеводитель + письмо “Хроники Бёрдхилла” из квартиры Вальдемара<\/li>\r\n              <li>Фото настольных игр из квартиры Феликса + путеводитель<\/li>\r\n              <li>Билет в кино из квартиры Габриэль<\/li>\r\n              <li>Открытка от коллеги из квартиры Моргана<\/li>\r\n            <\/ol>", "<ol>\r\n            <li>Ланжелье<\/li>\r\n            <li>Сэмюэл Старлинг<\/li>\r\n            <li>Свиристель<\/li>\r\n            <li>Фламинго Лэйн<\/li>\r\n            <li>Мост Великодушия<\/li>\r\n            <li>Счастливое королевство<\/li>\r\n            <li>Ворон<\/li>\r\n          <\/ol>\r\n          <br>Расположите буквы, оказавшиеся в выделенных цветом секциях кроссворда, в порядке, указанном на открытке под надписью “Код доступа”.<br>Получившееся кодовое слово - ВЖСЛОДА. Введите его на сайте дня рождения. Более подробную информацию вы можете найти, используя подсказку к цифровому ресурсу “Сайт Дня Рождения”."] }, { "name": "Скриншот переписки с Мариной", "message": ["Габриэль и Марина дружили. Марина часто выручала подругу деньгами. Вы уже прослушали аудиосообщение?", "Обратите внимание на сообщение с логином. Он вам понадобится на поздней стадии расследования."] }] }, "5": { "title": "Конверт Томпсон", "hint": [{ "name": "Газета", "message": ["Каждый из разделов газеты невероятно важен для расследования.<br>\r\n            Обратите внимание на статьи про бутик и кражу в булочной. Используя адреса, найдите на карте эти локации. Что вы можете сказать об их расположении относительно друг друга?<br>\r\n            Какая сумма была похищена из булочной? Сможете отыскать её в других документах?<br>\r\n            Вы уже позвонили в ивент-агентство “Атмосфера”?<br>\r\n            Статья о юбилее школы поможет вам ответить на один из вопросов кроссворда на открытке, которую инспектор нашёл в квартире Габриэль.<br>\r\n            Вы ведь знаете, что раздел частных объявлений газеты бывает очень важным? У каждой заметки свой код. Сможете определить автора какого-то из объявлений?<br>\r\n            У газеты “Хроники Бёрдхилла” есть платный премиум-раздел. Ссылка на него есть в самой газете. Данные для входа вы сможете получить, когда побываете во всех квартирах. ", "Бутик Марины Морзе и булочная Ланжелье находятся напротив друг друга. Это значит, что если вы покупаете выпечку, вам очень хорошо видно, что происходит в бутике. И наоборот.<br>\r\n            Из булочной было похищено 2765 шерлоков. Вы сможете найти ту же самую сумму и в другом документе, но вам придётся произвести арифметические вычисления.<br>\r\n            Дополнительные коды клиентов для звонка в “Атмосферу” вы можете найти в ежедневнике Габриэль.<br>\r\n            Название школы – Свиристель. Это один из ответов в кроссворде.<br>\r\n            Посмотрите на банковскую выписку Моргана Морзе и найдите там оплату за размещение объявления в газете с кодом, идентичным заметке о ртутных градусниках. Значит, её автор – Морган Морзе. "] }, { "name": "Скриншот переписки с Морганом (2 фото)", "message": ["Судя по календарю из квартиры Морзе, Тамара и Морган периодически встречались, чтобы посплетничать и выпить кофе. Одна из таких встреч состоялась третьего мая у Моргана дома. Как это могла использовать Тамара?<br>Морган пишет, что посмотрел свой гороскоп и готов к решительным действиям. Перейдите на астрологический сайт. Вы уже поняли, кто Морган по знаку зодиака?", "Чувства Тамары к Моргану явно выходили за рамки дружеских. На встрече, которая состоялась 3 мая, Тамара подкинула в ящик поддельное письмо. Якобы Феликс признавался в любви Марине, жене Моргана. Тамара знала, что именно в этом ящике Морган хранит почтовые марки. Поэтому позднее, уже из дома, она попросила одолжить ей несколько марок, будучи уверенной, что Морган обнаружит подкинутое послание. "] }, { "name": "Фото рабочего стола", "message": ["Для чего Тамара делает эти записи? Разве это её почерк? ", "Сравните почерк на записях с написанием фамилий жильцов на домофоне. Похоже, Тамара тренировалась подделывать почерк Феликса Фроста. Для чего ей это было нужно?", "Сопоставьте эту фотографию с фотографией ящика из квартиры Моргана Морзе. Получается, что именно Тамара была автором того любовного послания, якобы написанного от Феликса. Более подробную информацию вы можете найти в подсказке к документу “Фото ящика с термометрами” из квартиры Морзе. "] }] }, "6": { "title": "Конверт Фрост", "hint": [{ "name": "Скриншот домового чата (5 фото)", "message": ["Не оставляйте без внимания фотографии из этого чата. Они будут очень важны для расследования.<br>\r\n            Доставку для Моргана часто оставляют у его двери. Значит, к содержимому пакетов имеют доступ и соседи?<br>\r\n            К большому сожалению, кот Моргана, Марципан, умер. Да, вам нужно расследовать и это убийство тоже.<br>\r\n            Морган оставляет вещи для Габриэль в очень красивой сумке. Где ещё вы могли её видеть?<br>\r\n            После исчезновения своей супруги, у Моргана много дел в их магазине. Определите, где именно находится бутик, и что оттуда хорошо просматривается?", "Соседи говорят про репортаж в премиум-разделе газеты. Удалось ли вам получить к нему доступ?"] }, { "name": "Фото с настольными играми", "message": ["Феликс любит играть в настольные игры и собирать пазлы. У него хорошая коллекция, включая расследования “Поймай убийцу”.<br>Обратите внимание на пазл с Мостом Великодушия и Монополию. ", "В квартире Габриэль инспектор обнаружил открытку с кроссвордом. Теперь вы можете ответить на один из вопросов о достопримечательности района.<br>Коробка с игрой в Монополию выглядит так, как будто её недавно использовали. Что в ней может лежать, если игровые купюры, судя по фото с записями Феликса, лежат в мусорной корзине?"] }, { "name": "Фото с заметками", "message": ["Похоже, Феликс собирал о ком-то информацию. Для чего?<br>На записке от Каспера номер телефона Кристофера. Вам удалось ему дозвониться?", "Кристофер – тот самый пропавший внук Каспера Клауса. Если вы позвоните Кристоферу, то сможете убедиться, что с ним всё в порядке.<br>Вы обратили внимание на содержимое мусорной корзины? Купюры для игры в монополию и пакет лежат там не случайно.", "Феликс собирал информацию о внуке Каспера для того, чтобы провернуть аферу. Именно он сообщил Касперу, что его внук попал в аварию и потребовал деньги для выкупа. Каспер собрал нужную сумму,положил её в аптечный пакет и оставил у двери. Феликс забрал посылку, деньги вытащил, а пакет выбросил в ведро. Присмотритесь внимательней к логотипам на пакете. Точно такие же логотипы вы можете увидеть на чеке из квартиры Каспера и на рекламе аптеки в газете. В этом же ведре лежат игровые купюры. Вероятно, в самой Монополии теперь настоящие деньги. "] }] }, "7": { "title": "Конверт Вандервельде - Вандерлинден", "hint": [{ "name": "Послание с угрозой", "message": ["Вальдемар нашёл письмо с угрозами в одном из почтовых ящиков. Кто автор этого письма?", "Автор письма – Морган Морзе. Он хвастался в соседском чате приготовленным соусом. На том же фото можно заметить испачканную газету. Именно из этой газеты были вырезаны буквы для письма с угрозой. ", "Ещё одну вырезанную букву вы можете увидеть на фото, отправленном Тамарой в домовой чат. Похоже, она отклеилась при отправке послания с угрозой. Откуда именно?", "Потерявшаяся буква “Б” подходит только к одному слову. Её не хватает перед словом “..лэйка”. В оригинале письмо должно было выглядеть как “Я всё знаю про Блэйка.” Как это меняет смысл послания?"] }, { "name": "Выписка по счёту", "message": ["Чья это выписка и где ещё вам встречался код P90540?", "Владельца этой выписки можно определить по номеру счёта. Найдите тот же номер счёта в одном из документов.", "Номер счёта совпадает с личным счётом Моргана Морзе. Он указал его в письме с претензией производителю кормов. Третья строка выписки – оплата за размещение объявления. Посмотрите внимательно на газету и определите, какое именно объявление принадлежит Моргану?"] }, { "name": "Письмо от компании “Атмосфера”", "message": ["Не кажется ли вам знакомым ивент-агентство “Атмосфера”? Ищите упоминание о нём в других документах.", "Используйте газету и список телефонных звонков Габриэль.", "Диего Донован в письме сообщает Габриэль о её увольнении. Воспользуйтесь списком телефонных звонков Габриэль, чтобы узнать номер телефона Донована и точное время его звонка."] }, { "name": "Результат кардиообследования", "message": ["Что вы можете сказать о состоянии здоровья Моргана Морзе по этому обследованию?"] }, { "name": "Письмо от газеты “Хроники Бёрдхилла”", "message": ["Это письмо вы сможете использовать для доступа в премиум-аккаунт на сайте газеты. Вам удалось найти адрес этого сайта?<br>Более подробная информация в подсказке к цифровому ресурсу “Сайт газеты “Хроники Бёрдхилла”."] }] }, "8": { "title": "Конверт Клаус", "hint": [{ "name": "Чек из аптеки", "message": ["Вы уже знаете, для чего используются лекарства, приобретённые Каспером? Если нет, воспользуйтесь поиском в интернете.<br>Аптека был создана одним из отцов-основателей Бёрдхилла в 1850 году. Это поможет вам ответить на один из вопросов кроссворда в приглашении на детский праздник.", "Мукосат используют при болезнях суставов. Его вводят инъекционно, то есть с использованием шприца.<br>Донормил – это снотворное.<br>Мог ли Каспер использовать купленные в аптеке препараты и шприцы не в лечебных целях?", "Каспер Клаус неоднократно жаловался соседям на кота Марципана. Это понятно по сообщению на автоответчике Клауса и аудио, записанному Мариной для Габриэль. Мы узнаём из соседского чата, что Морган постоянно заказывал доставку корма для своего кота Марципана. Когда Моргана не было дома, курьер просто оставлял заказ у его двери. Так случилось и 20 мая. Каспер забрал пакет, после этого растворил таблетку снотворного в ступке (её видно на фото под телефоном) и ввёл лекарство в кошачий корм с помощью шприца. Затем он замаскировал место прокола скотчем и снова подложил уже отравленный заказ к двери Моргана. Именно на эту поврежденную упаковку Морган жаловался в своём электронном письме. К сожалению, коварный план Каспера сработал, и бедный кот Марципан скончался."] }, { "name": "Фото комода с телефоном", "message": ["Вы уже позвонили по этому телефонному номеру?<br>В комоде у Каспера ступка и пестик. Для чего они ему нужны?", "Если вы позвоните по номеру, то сможете прослушать сообщения на автоответчике Каспера Клауса.<br>Более подробную информацию о звонке вы можете получить, запросив подсказку к цифровому ресурсу “Звонок на автоответчик”."] }] }, "9": { "title": "Цифровые ресурсы", "hint": [{ "name": "Сайт для набора номеров телефона", "message": ["QR-код для перехода на этот сайт вы можете найти в бумажной инструкции к игре. В процессе расследования вам будут попадаться телефонные номера. Используйте этот сайт для набора номеров телефона. ", "Всего у вас будет 5 доступных номеров для звонка:\r\n            <ul>\r\n              <li>звонок Диего Доновану<\/li>\r\n              <li>звонок в “Атмосферу”<\/li>\r\n              <li>звонок Кристоферу<\/li>\r\n              <li>звонок на автоответчик<\/li>\r\n              <li>звонок Анне Арчер<\/li>\r\n            <\/ul>\r\n            Подробную информацию о каждом звонке вы можете получить, запросив соответствующую подсказку. "] }, { "name": "Звонок Диего Доновану", "message": ["Номер Диего вы можете найти на списке звонков с телефона Габриэль. ", "Номер Диего: 5508756314<br>Во время звонка Диего Донован подтверждает, что последний раз общался с Габриэль по телефону 18 мая в 18:33. Он говорит о плохих новостях и о том, что всё подробно написал в письме. Если вы не видели этого письма, значит вы посетили ещё не все квартиры. "] }, { "name": "Звонок в “Атмосферу”", "message": ["Номер ивент-агентства “Атмосфера” вы можете найти в газете из квартиры Тамары Томпсон. ", "Номер “Атмосферы”: 5508808080<br>Каждому клиенту компании присваивается код. В одной из квартир вы можете их найти и использовать, чтобы получить дополнительную информацию от звонка.", "В ежедневнике Габриэль вы может найти дополнительные пятизначные коды. Введите их после набора основного номера “Атмосферы” для получения информации. Вводите только пятизначные числовые значения."] }, { "name": "Звонок Кристоферу", "message": ["Номер Кристофера вы можете найти на фотографии стола с заметками из квартиры Феликса Фроста.", "Номер Кристофера: 5508947279<br>Похоже, у Кристофера всё хорошо. "] }, { "name": "Звонок на автоответчик", "message": ["Номер автоответчика вы можете найти на фото из квартиры Каспера Клауса. Этот номер он записал на видном месте, не доверяя своей памяти.", "Номер автоответчика: 5508144909<br>На автоответчике Каспера 2 сообщения. <br>Первое сообщение от Вальдемара. Вы уже поняли, на что жаловался Каспер, и чьей смерти предложил подождать Вальдемар?<br>Второе сообщение от Феликса Фроста с просьбой поделиться номером телефона внука Каспера, Кристофера. Каспер Клаус удовлетворил эту просьбу?", "Каспер Клаус жаловался Вальдемару на кота Моргана Морзе. Это вы можете понять из сообщения, которое Марина оставила своей подруге Габриэль. Более подробную информацию вы можете найти, используя подсказку к документу “Скриншот переписки с Мариной” из квартиры Габриэль.<br>Если вы побываете в гостях у Феликса Фроста, то вам будет доступна фотография его стола. На этом столе оставлена записка с номером телефона. Похоже, Каспер выполнил просьбу Феликса и оставил номер телефона своего внука. "] }, { "name": "Звонок Анне Арчер", "message": ["Номер телефона Анны Арчер вы можете узнать на сайте дня рождения. Для этого разгадайте кроссворд и получите код доступа. ", "Номер Анны Арчер: 5506203050<br>Анна Арчер – мама Алисы, лучшей подруги Генриетты Гримм. Во время звонка Анна сообщает адрес своего дома, а также важную информацию о перемещениях Габриэль 18 мая."] }, { "name": "Астрологический сайт", "message": ["Адрес сайта вы можете найти из переписки Моргана Морзе и Тамары Томпсон. ", "Адрес сайта – <a target=\"_blank\" href=\"https:\/\/starsfrom.space\/may3\/\">starsfrom.space\/may3<\/a><br>Вы уже нашли дату рождения Моргана Морзе? Тогда вы легко сможете понять, кем именно он был по знаку зодиака, и прочитать его астрологический прогноз на 3 мая. ", "Если вы уже побывали в квартире Габриэль, то вам доступна фотография её ежедневника. Одна из записей помогает определить дату рождения Моргана Морзе – 11 мая. Получается, что его знак – Телец. Морган всецело доверял свою судьбу звёздам. А этот прогноз очень повлиял на его решения. "] }, { "name": "Сайт Дня Рождения", "message": ["Если вы уже были в квартире Габриэль, то вам доступна открытка-приглашение на день рождения с кроссвордом. На этой открытке вы и найдете адрес сайта.", "Адрес сайта – <a target=\"_blank\" href=\"https:\/\/AliceHB.space\">AliceHB.space<\/a><br>Вам необходимо ввести на этом сайте кодовое слово. Для этого полностью разгадайте кроссворд. Для того, чтобы ответить на все вопросы кроссворда, вам необходимо побывать во всех квартирах. Более подробную информацию вы можете получить, используя подсказку к документу “Приглашение на День Рождения”.", "Код доступа – ВЖСЛОДА. Введите его и узнайте номер телефона Анны Арчер, мамы именинницы. Наберите этот номер с помощью сайта с телефоном и получите адрес, где проходил день рождения. Этот адрес очень пригодится в расследовании."] }, { "name": "Сайт газеты “Хроники Бёрдхилла”", "message": ["Адрес сайта вы можете найти в газете из квартиры Тамары Томпсон.", "Адрес сайта – <a target=\"_blank\" href=\"https:\/\/bcpremium.space\">bcpremium.space<\/a><br>Вам нужно попасть в премиум-аккаунт. Имя пользователя вы можете найти в письме к Тамаре Томпсон. Это письмо инспектор обнаружил в квартире Вальдемара.<br>Пароль вы можете узнать, запросив подсказку. Для этого введите логин на сайте газеты и нажмите на кнопку “Запросить подсказку пароля”.", "Имя пользователя – татоп<br>Пароль – это “адрес лучшей подруги моей “внучки”. Разумеется, внучкой Тамара называет Генриетту Гримм. Ну, а лучшая подруга Генриетты – Алиса Арчер. Чтобы узнать адрес Алисы, вам нужно решить кроссворд на приглашении из квартиры Габриэль, зайти на сайт дня рождения, указанный на той же открытке, ввести полученный после решения кроссворда код в нужное поле и позвонить маме именинницы по указанному телефону. Более подробную информацию вы можете получить, используя подсказки к документу “Приглашение на День Рождения” и цифровому ресурсу “Сайт дня рождения”.", "Пароль – пеликанстрит6<br>Очень внимательно посмотрите видео.<br>И снова реклама умного дома? ", "На видео для вас важна фотография с места предполагаемого преступления.<br>Обратите внимание на телефон с входящим вызовом и часы на стене. Вы можете определить, кому принадлежит этот телефон?<br>Обратите внимание на кружку и сумку. Где вы могли их видеть раньше?", "Кружка принадлежит бывшему коллеге Моргана Морзе, Бобби Блэйку. Это становится понятным, если изучить открытку из квартиры Моргана. Также об этом говорит схожий интерьер. Вероятно, и предполагаемое преступление совершается дома у Бобби.<br>\r\n              Сумка с надписью “Reykjavik” принадлежала супруге Моргана, Марине Морзе. Если вы посмотрите домовой чат, то поймёте, что именно в эту сумку Морган положил костюмы и парики, которые Габриэль попросила одолжить для костюмированного дня рождения. <br>\r\n              Если вы посмотрите список вызовов с телефона Габриэль Гримм, то увидите, что именно на её номер телефона совершался входящий звонок в 18:33. У вас есть все основания полагать, что девушка на фото – Габриэль Гримм.<br>\r\n              Действительно ли перед вами запечатлено преступление? Или Бобби и Габриэль заняты чем-то другим?", "Габриэль Гримм работала в ивент-агентстве “Атмосфера”. Это агентство оказывало услуги досуга для взрослых. Одним из клиентов агентства был Бобби Блйэк. 18 мая Габриэль забрала сумку “Reykjavik” с вещами, одолженную ей Морганом, для того, чтобы отвезти один из костюмов Генриетте, находившейся на дне рождения подруги. Также Габриэль нашла в сумке ко-что и для себя. Она знала, что Бобби Блэйк питает слабость к женщинам с необычным цветом волос, поэтому решила быть на встрече в синем парике. Об этом пристрастии Бобби вы тоже можете узнать, если позвоните в “Атмосферу” и введёте нужный код клиента. Получается, что газета засняла совсем не преступление. "] }, { "name": "Сайт умного дома i-home", "message": ["Адрес сайта вы можете узнать, войдя в премиум-аккаунт на сайте газеты “Хроники Бёрдхилла”. ", "Адрес сайта умного дома – <a target=\"_blank\" href=\"https:\/\/smhm.space\">smhm.space<\/a><br>Логин вы найдете в переписке между Габриэль и Мариной.<br>Пароль вы можете узнать, запросив подсказку. Для этого введите логин на сайте умного дома и нажмите на кнопку “Запросить подсказку пароля”. ", "Логин – SH39501<br>Пароль – “мой новый любимый город”. Используйте открытку из квартиры Моргана. ", "Габриэль и Марина отдыхали в Рейкьявике. На открытке Марина пишет, что теперь это её любимый город. <br>Значит, пароль – Reykjavik", "Обратите внимание на сценарий поведения умного дома и прослушайте аудиосообщение. <br>Не кажутся ли вам знакомыми шумы на фоне?", "Запись сформирована из вырезанных фрагментов аудиосообщения, которое Марина отправляла своей подруге Габриэль. Получается, что Габриэль, имея доступ к умному дому семьи Морзе, создала нужный ей сценарий и вставила смонтированную аудиозапись в систему. Вы уже поняли, для чего она это сделала? Тогда вы совсем близко к завершению расследования. "] }] } };
+      let currentMessages = [];
+      let currentStep = 0;
+
+      const $hintBtn = $('#get-hint-btn');
+      const $hintResultText = $('#hint-result-text');
+
+      function getMessages(val) {
+        const [groupId, hintIndex] = val.split('-');
+        try {
+          const hint = allHints[groupId]?.hint[parseInt(hintIndex)];
+          if (!hint) return [];
+          const raw = hint.message;
+          return Array.isArray(raw) ? raw : [raw];
+        } catch (e) {
+          console.error('Ошибка разбора подсказки:', e);
+          return [];
+        }
+      }
+
+
+      $('.hint-radio').on('change', function () {
+        currentMessages = getMessages($(this).val());
+        currentStep = 0;
+        $hintResultText.hide().empty();
+        $hintBtn.text('Подсказка').prop('disabled', currentMessages.length === 0).show();
+      });
+
+      $hintBtn.on('click', function (e) {
+        e.preventDefault();
+        if (!currentMessages.length) return;
+
+        const $item = $('<div class="hint-step"></div>').html(currentMessages[currentStep]);
+
+        if (currentStep === 0) {
+          $hintResultText.empty().append($item).show();
+        } else {
+          $('<hr>').appendTo($hintResultText);
+          $item.hide().appendTo($hintResultText).fadeIn(400);
+        }
+
+        if (currentStep >= currentMessages.length - 1) {
+          /*       $hintBtn.text('Подсказка').prop('disabled', true); */
+          $hintBtn.text('Подсказка').hide();
+        } else {
+          $hintBtn.text('Ещё подсказка');
+          currentStep++;
+        }
+      });
+    });
+  </script>
+  <script src="./js/phone.js"></script>
+</body>
+
+</html>
