@@ -7,6 +7,10 @@
   --var-color-paper: #d5c2a8;
 }
 
+button:focus {
+  outline: none;
+}
+
 #phone_wrapper {
   min-height: 500px;
   height: 80vh;

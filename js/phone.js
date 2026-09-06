@@ -131,46 +131,31 @@ $(function () {
     ringingNodes = [];
   }
 
-  // --- НОВАЯ ВЕРСИЯ playAudioFile через Web Audio API (без HTML5 Audio) ---
   function playAudioFile(src, onEnd) {
-    unlockHtmlAudio();
-    const ctx = ensureAudioContextSync();
-    if (!ctx || ctx.state !== 'running') {
+    if (!src) {
       if (onEnd) onEnd();
       return;
     }
 
-    // Останавливаем предыдущий активный звук, если есть
     if (activeAudio) {
-      try { activeAudio.stop(); } catch (e) { }
+      try { 
+        if (activeAudio.stop) activeAudio.stop(); 
+        else if (activeAudio.pause) { activeAudio.pause(); activeAudio.currentTime = 0; }
+      } catch (e) { }
       activeAudio = null;
     }
 
-    const url = src + '?_=' + Date.now();
-    fetch(url)
-      .then(response => {
-        if (!response.ok) throw new Error('Network error');
-        return response.arrayBuffer();
-      })
-      .then(buffer => ctx.decodeAudioData(buffer))
-      .then(decodedData => {
-        const source = ctx.createBufferSource();
-        source.buffer = decodedData;
-        const gain = ctx.createGain();
-        gain.gain.setValueAtTime(0.5, ctx.currentTime);
-        source.connect(gain);
-        gain.connect(ctx.destination);
-        source.onended = function () {
-          if (activeAudio === source) activeAudio = null;
-          if (onEnd && !isCallOffInProgress) onEnd();
-        };
-        source.start();
-        activeAudio = source;
-      })
-      .catch(err => {
-        console.warn('Ошибка загрузки/воспроизведения MP3:', err);
-        if (!isCallOffInProgress && onEnd) onEnd();
-      });
+    const audio = new Audio(src);
+    audio.volume = 0.5;
+    audio.onended = function () {
+      if (activeAudio === audio) activeAudio = null;
+      if (onEnd && !isCallOffInProgress) onEnd();
+    };
+    audio.play().catch(err => {
+      console.error("Audio play error", err);
+      if (onEnd) onEnd();
+    });
+    activeAudio = audio;
   }
 
   // --- ИНТЕРФЕЙС ---
@@ -213,7 +198,10 @@ $(function () {
     isCallOffInProgress = true;
     stopRinging();
     if (activeAudio) {
-      try { activeAudio.stop(); } catch (e) { }
+      try { 
+        if (activeAudio.stop) activeAudio.stop(); 
+        else if (activeAudio.pause) { activeAudio.pause(); activeAudio.currentTime = 0; }
+      } catch (e) { }
       activeAudio = null;
     }
     $call.removeClass('red');

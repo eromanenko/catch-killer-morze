@@ -623,3 +623,13 @@ main {
       margin-top: 0;
     }
   }
+
+.app-version {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 9999;
+}

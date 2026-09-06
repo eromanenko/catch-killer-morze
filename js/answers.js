@@ -1,4 +1,4 @@
-export const answers = {
+window.answers = {
   "1": [
     {
       "answerIndex": 0,

@@ -1370,9 +1370,8 @@
       </div>
     </section>
   </main>
-  <script type="module">
-    import { answers } from './js/answers.js';
-
+  <script src="./js/answers.js"></script>
+  <script>
     // Простой jQuery для табов
     $(document).ready(function () {
 
@@ -1594,7 +1593,7 @@
           $hintResultText.empty().append($item).show();
         } else {
           $('<hr>').appendTo($hintResultText);
-          $item.hide().appendTo($hintResultText).fadeIn(400);
+          $item.appendTo($hintResultText);
         }
 
         if (currentStep >= currentMessages.length - 1) {
@@ -1626,6 +1625,7 @@
       });
     }
   </script>
+  <div class="app-version">v0.8.3</div>
 </body>
 
 </html>
