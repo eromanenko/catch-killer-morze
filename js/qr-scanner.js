@@ -79,9 +79,8 @@ function onScanSuccess(decodedText, decodedResult) {
             if (audioElem) {
                 const group = $(audioElem).closest('.hint-group');
                 if (group.length) {
-                    $('html, body').animate({
-                        scrollTop: group.offset().top - 100
-                    }, 500);
+                    const offsetTop = group[0].getBoundingClientRect().top + window.scrollY - 100;
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
                 }
                 audioElem.play();
             }
